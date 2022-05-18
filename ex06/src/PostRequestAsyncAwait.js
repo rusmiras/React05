@@ -13,7 +13,7 @@ class PostRequestAsyncAwait extends Component{
             body: JSON.stringify({title: 'React POST Request Example'})
         }
         
-        const response = fetch('https://jsonplaceholder.typicode.com/posts', requestOptions);
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts', requestOptions);
         const data = await response.json();
         this.setState({ articleId: data.id });
     }
